@@ -1,0 +1,13 @@
+# .github/workflows/api-tests.yml
+name: API Test
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: echo "The Job was automatically triggered by a {{github.event_name}}event."
+      - run:  python Demo.py
+      
